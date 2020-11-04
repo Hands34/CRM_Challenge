@@ -1,7 +1,5 @@
 <h2>Customers</h2>
 
 <ol class="ml-5">
-  <% @customers.each do |customer| %>
-    <li><%= customer.full_name %></li>
-  <% end %>
+  <%= render @customers %>
 </ol>

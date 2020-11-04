@@ -1,31 +1,24 @@
 <div class="column">
   <div class="card">
-    <%# <% if horse.image.present? %>
+    <%# <% if horse.image.present?
       <div class="card-image">
       <figure class="image">
-        <%= image_tag horse.image%>
-      </figure>
+        <%= image_tag customer.image%>
+     <%# </figure>
       </div>
     <% end %>
     <div class="card-content">
       <p class="title">
-        <% if show_link %>
-          <%= link_to horse.name, horse %>
-        <% else %>
-          <%= horse.name %>
-        <% end %>
+          <%= customer.full_name %>
       </p>
-      <p>Breed: <%= link_to horse.breed.name, horse.breed %></p>
+      <p>Email: <%= customer.email %></p>
     </div>
     <footer class="card-footer">
       <p class="card-footer-item">
-        Age: <br><%= horse.age %>
+        Phone Number: <br><%= customer.phone_number %>
       </p>
       <p class="card-footer-item">
-        Legs: <br><%= horse.number_of_legs %>
-      </p>
-      <p class="card-footer-item">
-        Speed: <br><%= horse.top_speed.round(2) %>
+        Notes: <br><%= customer.notes %>
       </p>
     </footer>
   </div>
