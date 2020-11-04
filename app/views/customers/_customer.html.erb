@@ -2,13 +2,13 @@
   <div class="card">
      <% if customer.image.present? %>
       <div class="card-image">
-      <figure class="image">
+      <figure class="image is-128x128">
         <%= image_tag customer.image%>
       </figure>
       </div>
     <% end %>
     <div class="card-content">
-      <p class="title">
+      <p class="title mt-5">
           <%= customer.full_name %>
       </p>
       <p>Email: <%= customer.email %></p>

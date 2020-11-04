@@ -8,7 +8,7 @@ class CustomersController < ApplicationController
   end
 
   def alphabetized
-    @alpha_customers = Customer.order("full_name DESC")
+    @customers = Customer.order("full_name DESC")
   end
 
   def missing_email; end
