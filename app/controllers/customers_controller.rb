@@ -7,7 +7,9 @@ class CustomersController < ApplicationController
     @customer = Customer.find(params[:id])
   end
 
-  def alphabetized; end
+  def alphabetized
+    @alpha_customers = Customer.order("full_name DESC")
+  end
 
   def missing_email; end
 end
