@@ -1,2 +1,10 @@
-<h1>Customers#missing_email</h1>
-<p>Find me in app/views/customers/missing_email.html.erb</p>
+<h2>Customers without Email</h2>
+
+<ul class="ml-5">
+  <li><a href="<%= alphabetized_customers_path %>">Alphabetized List</a></li>
+  <li><a href="<%= customers_path %>">List of customers</a></li>
+</ul>
+
+<ol class="ml-5">
+  <%= render @no_email %>
+</ol>

@@ -1,5 +1,11 @@
 <h2>Customers</h2>
 
+<%# <%= link_to alphabetized_customers_path %>
+<ul class="ml-5">
+  <li><a href="<%= alphabetized_customers_path %>">Alphabetized List</a></li>
+  <li><a href="<%= missing_email_customers_path %>">List of customers with no email</a></li>
+</ul>
+
 <ol class="ml-5">
   <%= render @customers %>
 </ol>

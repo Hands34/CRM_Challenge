@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  resources :customers, only: %i[index show alphabetized missing_email]
+  resources :customers, only: %i[index show] do
+    collection do
+      get "alphabetized"
+      get "missing_email"
+    end
+  end
   root to: "customers#index"
 
   devise_for :admin_users, ActiveAdmin::Devise.config

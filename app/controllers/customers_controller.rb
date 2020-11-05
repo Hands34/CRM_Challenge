@@ -8,8 +8,10 @@ class CustomersController < ApplicationController
   end
 
   def alphabetized
-    @customers = Customer.order("full_name DESC")
+    @ordered_customers = Customer.order("full_name")
   end
 
-  def missing_email; end
+  def missing_email
+    @no_email = Customer.where("email LIKE ''")
+  end
 end
